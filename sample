@@ -1,0 +1,11 @@
+ class lang_letter():
+     lang_dict={}
+     def __init__(self,lang_name,lang_location):
+         import numpy as np
+         from PIL import Image
+         obj="C:/Users/hp/Desktop/A Letter/"# this is your folder location
+         self.lang_name=lang_name
+         self.lang_location=lang_location
+         self.image=Image.open(obj+self.lang_location)
+         self.lang_letter_array=np.asarray(self.image)
+         lang_letter.lang_dict.update({self.lang_name:self.lang_letter_array})
